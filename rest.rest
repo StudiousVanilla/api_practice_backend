@@ -1,0 +1,21 @@
+GET http://localhost:3000/blogs 
+content-type: application/json
+
+####
+
+GET http://localhost:3000/blogpost/2
+content-type: application/json
+
+####
+
+GET http://localhost:3000/blogfilter/Stress%20Management
+content-type: application/json
+
+{
+    "theme": "Mentorship"
+}
+
+####
+
+GET http://localhost:3000/blogthemes 
+content-type: application/json
