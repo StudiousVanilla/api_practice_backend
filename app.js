@@ -57,5 +57,5 @@ const fetchHISTData = async (res) =>{
 
 // just to stop errors when testing Heroku app
 app.get('/hist', (req, res)=>{
-    fetchHISTData(res)
+    res.send('hello')
 })
