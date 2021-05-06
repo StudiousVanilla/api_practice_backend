@@ -7,13 +7,11 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 // Add headers
 app.use(function (req, res, next) {
-    const allowedOrigins = ['https://hungry-goodall-28f444.netlify.app', 'http://localhost:3001'];
+    const allowedOrigins = ["https://hungry-goodall-28f444.netlify.app", "http://localhost:3001"];
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
        res.setHeader('Access-Control-Allow-Origin', origin);
     }
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', '');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
