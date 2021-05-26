@@ -3,6 +3,6 @@ const router = express.Router();
 
 const cocktailController = require("../controllers/cocktailController")
 
-router.get('/:id', cocktailController.fetchCocktail)
+router.get('/', cocktailController.fetchCocktail)
 
 module.exports = router

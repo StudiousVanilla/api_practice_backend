@@ -38,7 +38,7 @@ const cocktailRoutes = require("./routes/cocktailRoutes")
 app.use('/', LOTRRoutes)
 
 // use LOTR routes for base URL endpoint
-app.use('/coctails', cocktailRoutes)
+app.use('/cocktail', cocktailRoutes)
 
 
 app.listen(port, () => {

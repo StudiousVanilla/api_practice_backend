@@ -4,7 +4,7 @@ const fetch = require('node-fetch')
 
 const fetchCocktail = async (req, res) =>{
     try {
-        const json = await fetch(`www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${req.params.id}`)
+        const json = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita`)
         const data = await json.json();
         res.send(data)
     } catch (error) {
