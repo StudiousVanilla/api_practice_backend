@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 // Add headers
 app.use(function (req, res, next) {
-    const allowedOrigins = "https://hungry-goodall-28f444.netlify.app";
+    const allowedOrigins = ["https://hungry-goodall-28f444.netlify.app", "http://localhost:3000"];
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
        res.setHeader('Access-Control-Allow-Origin', origin);
@@ -32,9 +32,13 @@ app.use(function (req, res, next) {
 
 // initialise routes
 const LOTRRoutes = require("./routes/LOTRRoutes")
+const cocktailRoutes = require("./routes/cocktailRoutes")
 
 // use LOTR routes for base URL endpoint
 app.use('/', LOTRRoutes)
+
+// use LOTR routes for base URL endpoint
+app.use('/coctails', cocktailRoutes)
 
 
 app.listen(port, () => {
@@ -42,20 +46,24 @@ app.listen(port, () => {
 })
 
 
-// for hostorical dadt api thing - might n it be used for hthis project
-const fetchHISTData = async (res) =>{
-    try {
-        const json = await fetch("http://history.muffinlabs.com/date")
-        const data = await json.json();
-        res.send(data.data.Events)
+
+
+
+
+// for hostorical data api thing - might n it be used for hthis project
+// const fetchHISTData = async (res) =>{
+//     try {
+//         const json = await fetch("http://history.muffinlabs.com/date")
+//         const data = await json.json();
+//         res.send(data.data.Events)
  
-    } catch (error) {
-        console.log(`error is : ${error}`);
-    }
-}
+//     } catch (error) {
+//         console.log(`error is : ${error}`);
+//     }
+// }
 
 
-// just to stop errors when testing Heroku app
-app.get('/hist', (req, res)=>{
-    res.send('hello')
-})
+// // just to stop errors when testing Heroku app
+// app.get('/hist', (req, res)=>{
+//     res.send('hello')
+// })
