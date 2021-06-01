@@ -97,6 +97,20 @@ const RootQueryType = new GraphQLObjectType({
           
           return data.drinks[0]
         }
+      },
+      test:{
+        type: DrinkType,
+        description: 'A single drink',
+        args: {
+          id: { type: GraphQLString}
+        },
+        resolve: async () => {
+          const response = await fetch(`https://www.thecocktaildb.com/api/json/v2/${process.env.COCKTAIL_API_KEY}/lookup.php?i=15849`)
+  
+          const data = await response.json()
+          
+          return data.drinks[0]
+        }
       }
     })
 })
