@@ -1,21 +1,77 @@
-GET http://localhost:3000/blogs 
+GET http://localhost:3000/cocktail/type/alco
 content-type: application/json
 
-####
 
-GET http://localhost:3000/blogpost/2
+###
+
+
+GET http://localhost:3000/cocktail/ingredients
 content-type: application/json
 
-####
 
-GET http://localhost:3000/blogfilter/Stress%20Management
+###
+
+GET http://localhost:3000/cocktail/glasses
 content-type: application/json
 
-{
-    "theme": "Mentorship"
+
+###
+
+
+GET http://localhost:3000/cocktail/ingredient/7-up+vodka
+content-type: application/json
+
+
+###
+
+
+GET http://localhost:3000/cocktail/drink/17105
+content-type: application/json
+
+
+
+###
+
+
+
+GET http://localhost:3000/graphql
+content-type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query($ingredients: String!){
+    drinks(ingredients: $ingredients){
+        strDrink
+        idDrink
+        drinkInfo{
+            strGlass
+        }
+    }
 }
 
-####
+{
+    "ingredients":"banana"
+}
 
-GET http://localhost:3000/blogthemes 
+
+###
+
+
+
+GET http://localhost:3000/graphql
 content-type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query($id: String!){
+    drink(id: $id){
+        strDrink
+        idDrink
+        drinkInfo{
+            strGlass
+        }
+    }
+}
+
+{
+    "id":"15849"
+}
+

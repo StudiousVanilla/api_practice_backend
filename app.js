@@ -1,13 +1,13 @@
 const express = require('express')
+const {graphqlHTTP} = require('express-graphql')
 const app = express()
-const port = process.env.PORT || 3000 
-;
+const port = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json())
 // Add headers
 app.use(function (req, res, next) {
-    const allowedOrigins = ["https://hungry-goodall-28f444.netlify.app", "http://localhost:3000"];
+    const allowedOrigins = ["https://hungry-goodall-28f444.netlify.app", "http://localhost:3001"];
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
        res.setHeader('Access-Control-Allow-Origin', origin);
@@ -37,13 +37,49 @@ const cocktailRoutes = require("./routes/cocktailRoutes")
 // use LOTR routes for base URL endpoint
 app.use('/', LOTRRoutes)
 
-// use LOTR routes for base URL endpoint
+
+
+// get schema for graphQL
+const schema = require('./graphQL')
+// use graphWL for '/graphql endpoints'
+app.use('/graphql', graphqlHTTP({
+  schema: schema,
+  graphiql:true
+}))
+
+
+
+
+
+
+
+// use cocktail routes for base URL endpoint
+// may not be necessary due to graphQL
 app.use('/cocktail', cocktailRoutes)
 
 
 app.listen(port, () => {
-    console.log(`Example app listening at ${port}`) 
+  console.log(`Example app listening at ${port}`) 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
