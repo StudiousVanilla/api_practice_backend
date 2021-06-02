@@ -2,33 +2,62 @@ const express = require('express')
 const {graphqlHTTP} = require('express-graphql')
 const app = express()
 const port = process.env.PORT || 3000;
+const cors = require('cors')
+
+
+const corsOptions = {
+  origin: ["http://localhost:3001","http://localhost:3000" ,"https://hungry-goodall-28f444.netlify.app"]
+}
+
+app.use(cors(corsOptions))
 
 // middleware
 app.use(express.json())
-// Add headers
-app.use(function (req, res, next) {
-    const allowedOrigins = ["https://hungry-goodall-28f444.netlify.app", "http://localhost:3001"];
-    const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-       res.setHeader('Access-Control-Allow-Origin', origin);
-    }
-
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
 
 
-    res.setHeader('set-cookie', 'samesite=None; secure');
 
-    // Pass to next layer of middleware
-    next();
-});
+
+
+
+
+
+
+// // Add headers
+// app.use(function (req, res, next) {
+//     const allowedOrigins = ["https://hungry-goodall-28f444.netlify.app", "http://localhost:3001", "http://localhost:3000"];
+//     const origin = req.headers.origin;
+//     if (allowedOrigins.includes(origin)) {
+//        res.setHeader('Access-Control-Allow-Origin', origin);
+//     }
+
+//     // Request methods you wish to allow
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+//     // Request headers you wish to allow
+//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+//     // Set to true if you need the website to include cookies in the requests sent
+//     // to the API (e.g. in case you use sessions)
+//     res.setHeader('Access-Control-Allow-Credentials', true);
+
+
+//     res.setHeader('set-cookie', 'samesite=None; secure');
+
+//     // Pass to next layer of middleware
+//     next();
+// });
+
+
+
+
+
+
+
+
+
+
+
+
 
 // initialise routes
 const LOTRRoutes = require("./routes/LOTRRoutes")
