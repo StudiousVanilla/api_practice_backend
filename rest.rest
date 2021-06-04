@@ -43,7 +43,7 @@ query($ingredients: String!){
         strDrink
         idDrink
         drinkInfo{
-            strGlass
+            ingredients 
         }
     }
 }
