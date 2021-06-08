@@ -18,14 +18,14 @@ content-type: application/json
 ###
 
 
-GET http://localhost:3000/cocktail/ingredient/7-up+vodka
+GET http://localhost:3000/cocktail/ingredient/Sloe Gin
 content-type: application/json
 
 
 ###
 
 
-GET http://localhost:3000/cocktail/drink/17105
+GET http://localhost:3000/cocktail/drink/178321
 content-type: application/json
 
 
@@ -43,7 +43,9 @@ query($ingredients: String!){
         strDrink
         idDrink
         drinkInfo{
-            ingredients 
+            strAlcoholic
+            strGlass
+            numIngredients
         }
     }
 }
