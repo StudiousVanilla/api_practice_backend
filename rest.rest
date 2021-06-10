@@ -18,9 +18,7 @@ content-type: application/json
 ###
 
 
-GET http://localhost:3000/cocktail/ingredient/Sloe Gin
-content-type: application/json
-
+GET http://localhost:3000/cocktail/ingredient/gin,coca-cola
 
 ###
 
