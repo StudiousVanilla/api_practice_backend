@@ -18,7 +18,7 @@ content-type: application/json
 ###
 
 
-GET http://localhost:3000/cocktail/ingredient/gin,cranberry_juice
+GET http://localhost:3000/cocktail/ingredient/gin
 
 ###
 
@@ -73,6 +73,6 @@ query($id: String!){
 }
 
 {
-    "id":"17114"
+    "id":"17225"
 }
 
