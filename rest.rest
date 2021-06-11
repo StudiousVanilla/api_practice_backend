@@ -18,12 +18,12 @@ content-type: application/json
 ###
 
 
-GET http://localhost:3000/cocktail/ingredient/gin,coca-cola
+GET http://localhost:3000/cocktail/ingredient/gin,cranberry_juice
 
 ###
 
 
-GET http://localhost:3000/cocktail/drink/178321
+GET http://localhost:3000/cocktail/drink/11002
 content-type: application/json
 
 

@@ -14,6 +14,8 @@ const FullDrinkType = new GraphQLObjectType({
     name: 'DrinkInfo',
     description: 'extra drink information',
     fields: ()=>({
+      strDrink: {type:GraphQLString},
+      idDrink: {type:GraphQLString},
       strAlcoholic: {type:GraphQLString},
       strGlass: {type:GraphQLString},
       strInstructions: {type:GraphQLString},
