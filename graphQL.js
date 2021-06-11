@@ -49,6 +49,52 @@ const FullDrinkType = new GraphQLObjectType({
       strMeasure13: {type:GraphQLString},
       strMeasure14: {type:GraphQLString},
       strMeasure15: {type:GraphQLString},
+      ingredients:{
+        type: GraphQLList(GraphQLString),
+        description: 'A list of ingredients',
+        resolve: (parent)=>{
+          return[
+          parent.strIngredient1,
+          parent.strIngredient2,
+          parent.strIngredient3,
+          parent.strIngredient4,
+          parent.strIngredient5,
+          parent.strIngredient6,
+          parent.strIngredient7,
+          parent.strIngredient8,
+          parent.strIngredient9,
+          parent.strIngredient10, 
+          parent.strIngredient11,
+          parent.strIngredient12,
+          parent.strIngredient13,
+          parent.strIngredient14,
+          parent.strIngredient15
+          ]
+        }
+      },
+      measures:{
+        type: GraphQLList(GraphQLString),
+        description: 'A list of measures',
+        resolve: (parent)=>{
+          return[
+          parent.strMeasure1,
+          parent.strMeasure2,
+          parent.strMeasure3,
+          parent.strMeasure4,
+          parent.strMeasure5,
+          parent.strMeasure6,
+          parent.strMeasure7,
+          parent.strMeasure8,
+          parent.strMeasure9,
+          parent.strMeasure10, 
+          parent.strMeasure11,
+          parent.strMeasure12,
+          parent.strMeasure13,
+          parent.strMeasure14,
+          parent.strMeasure15
+          ]
+        }
+      },
     })
 })
 

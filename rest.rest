@@ -23,7 +23,7 @@ GET http://localhost:3000/cocktail/ingredient/gin,cranberry_juice
 ###
 
 
-GET http://localhost:3000/cocktail/drink/11002
+GET http://localhost:3000/cocktail/drink/11242
 content-type: application/json
 
 
@@ -64,14 +64,15 @@ X-REQUEST-TYPE: GraphQL
 query($id: String!){
     drink(id: $id){
         strDrink
-        idDrink
-        drinkInfo{
+            idDrink
             strGlass
-        }
+            strInstructions
+            ingredients
+            measures
     }
 }
 
 {
-    "id":"15849"
+    "id":"17114"
 }
 
