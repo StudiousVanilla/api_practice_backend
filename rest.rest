@@ -49,7 +49,7 @@ query($ingredients: String!){
 }
 
 {
-    "ingredients":"Lemon"
+    "ingredients":"Amaretto"
 }
 
 
@@ -73,6 +73,6 @@ query($id: String!){
 }
 
 {
-    "id":"11164"
+    "id":"11025"
 }
 

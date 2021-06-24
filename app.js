@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 const cors = require('cors')
 
 const corsOptions = {
-  origin: ["http://localhost:3001","http://localhost:3000" ,"https://hungry-goodall-28f444.netlify.app", "https://www.drinkmxr.com"]
+  origin: ["https://hungry-goodall-28f444.netlify.app", "https://www.drinkmxr.com"]
 }
 
 app.use(cors(corsOptions))
