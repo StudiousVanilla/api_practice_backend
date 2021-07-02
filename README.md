@@ -7,10 +7,10 @@ Current frontend projects that use this backend:
 
 * [LOTR Quotes](https://hungry-goodall-28f444.netlify.app/) - [Repo](https://github.com/StudiousVanilla/api_practice_frontend)
 
-# DrinkMXR
+# :cocktail: DrinkMXR
 
 Fetches data from [thecocktaildb](https://www.thecocktaildb.com/api.php) for DrinkMXR frontend
 
-# LOTR quotes
+# :ring: LOTR quotes
 
 Fetches data from the [the-one-api](https://the-one-api.dev/) for LOTR quote frontend
