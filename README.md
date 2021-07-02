@@ -25,6 +25,6 @@ Character data is fetched using a character id endpoint, taken from the quote da
 
 Data is sent to the frontend in JSON format.
 
-# :computer: [Live Demo](https://hungry-goodall-28f444.netlify.app/) - [Repo](https://github.com/StudiousVanilla/api_practice_frontend)
+:computer: [Live Demo](https://hungry-goodall-28f444.netlify.app/) - [Repo](https://github.com/StudiousVanilla/api_practice_frontend)
 
 
