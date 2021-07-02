@@ -14,3 +14,17 @@ Fetches data from [thecocktaildb](https://www.thecocktaildb.com/api.php) for Dri
 # :ring: LOTR quotes
 
 Fetches data from the [the-one-api](https://the-one-api.dev/) for LOTR quote frontend
+
+Uses Express Routes and Controllers to manage data sent to front end. Follows a simple REST api naming conventions.
+
+Makes use of a [the-one-api](https://the-one-api.dev/) bearer token for authentication.
+
+Fetches quote array and then selects a quote based off random number generation.
+
+Character data is fetched using a character id endpoint, taken from the quote data onj the frontend.
+
+Data is sent to the frontend in JSON format.
+
+# :computer: [Live Demo](https://hungry-goodall-28f444.netlify.app/) - [Repo](https://github.com/StudiousVanilla/api_practice_frontend)
+
+

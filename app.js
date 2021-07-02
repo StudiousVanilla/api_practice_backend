@@ -1,3 +1,5 @@
+// TODO: Clean up 'cocktail routes and controllers fiules as they are not neccessary due to graphQL
+
 const express = require('express')
 const {graphqlHTTP} = require('express-graphql')
 const app = express()
@@ -19,9 +21,6 @@ const cocktailRoutes = require("./routes/cocktailRoutes")
 
 
 
-
-
-
 // LOTR ****
 
 // use LOTR routes for base URL endpoint
@@ -32,7 +31,6 @@ app.use('/', LOTRRoutes)
 
 
 // cocktails ****
-
 
 // get schema for graphQL
 const schema = require('./graphQL')
@@ -48,53 +46,7 @@ app.use('/graphql', graphqlHTTP({
 app.use('/cocktail', cocktailRoutes)
 
 
-
-
 // Port ****
-
-
 app.listen(port, () => {
   console.log(`Example app listening at ${port}`) 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// for hostorical data api thing - might n it be used for hthis project
-// const fetchHISTData = async (res) =>{
-//     try {
-//         const json = await fetch("http://history.muffinlabs.com/date")
-//         const data = await json.json();
-//         res.send(data.data.Events)
- 
-//     } catch (error) {
-//         console.log(`error is : ${error}`);
-//     }
-// }
-
-
-// // just to stop errors when testing Heroku app
-// app.get('/hist', (req, res)=>{
-//     res.send('hello')
-// })
