@@ -17,7 +17,13 @@ app.use(express.json())
 
 // initialise routes
 const LOTRRoutes = require("./routes/LOTRRoutes")
+
+// just for development practice, actual DrinkMXR application uses '/graphQL' endpoint to fetch data from cocktailDB and then returns data to front end
 const cocktailRoutes = require("./routes/cocktailRoutes")
+
+// use cocktail routes for base URL endpoint
+// again just for development practice, not actually necessary due to graphQL endpoint
+app.use('/cocktail', cocktailRoutes)
 
 
 
@@ -28,22 +34,18 @@ app.use('/', LOTRRoutes)
 
 
 
-
-
 // cocktails ****
 
 // get schema for graphQL
 const schema = require('./graphQL')
-// use graphWL for '/graphql endpoints'
+// use graphQL for '/graphql endpoints'
 app.use('/graphql', graphqlHTTP({
   schema: schema,
   graphiql:true
 }))
 
 
-// use cocktail routes for base URL endpoint
-// may not be necessary due to graphQL
-app.use('/cocktail', cocktailRoutes)
+
 
 
 // Port ****

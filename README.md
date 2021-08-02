@@ -11,6 +11,15 @@ Current frontend projects that use this backend:
 
 Fetches data from [thecocktaildb](https://www.thecocktaildb.com/api.php) for DrinkMXR frontend
 
+Uses graphQL to manage complex queries from frontend to [thecocktaildb](https://www.thecocktaildb.com/api.php). Express then returns JSON data to front end.
+
+GraphQL manipulates data fetched from [thecocktaildb](https://www.thecocktaildb.com/api.php) and returns data relevant to frontend application and in a format designed to be easily accessed by the frontend.
+
+Makes use of [thecocktaildb](https://www.thecocktaildb.com/api.php) api key for authorization to access complete dataset and all endpoints
+
+:computer: [Live Demo](https://www.drinkmxr.com/) - [Frontend Repo](https://github.com/StudiousVanilla/drinkmxr)
+
+
 # :ring: LOTR quotes
 
 Fetches data from the [the-one-api](https://the-one-api.dev/) for LOTR quote frontend

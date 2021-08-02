@@ -1,3 +1,8 @@
+
+// just for development practice, actual DrinkMXR application uses '/graphQL' endpoint
+
+
+
 const express = require('express');
 const router = express.Router();
 

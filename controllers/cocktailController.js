@@ -1,3 +1,8 @@
+
+// just for development practice, actual DrinkMXR application uses '/graphQL' endpoint
+
+
+
 require('dotenv').config()
 const fetch = require('node-fetch')
 
