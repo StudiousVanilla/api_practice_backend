@@ -1,6 +1,8 @@
 Built by [Oisin Byrne](https://www.oisinbyrne.me)
 
-This backend, built with Node and Express JS, is used to send data to multiple front end projects. This is to reduce the personal costs of hosting and using a dyno on [heroku](https://id.heroku.com). This backend is only used for projects do not require a large or dedicated backend.
+This backend, built with Node and Express JS, is used to send data to multiple front end projects. Application has been deployed to [heroku](https://id.heroku.com). 
+
+Building a backend that served multiple, unrelated, frontend applications was done to reduce the personal costs of hosting, and using a dyno, on Heroku. This backend is only used for projects do not require a large or dedicated backend.
 
 Current frontend projects that use this backend:
 * [DrinkMXR](https://www.drinkmxr.com/) - [Repo](https://github.com/StudiousVanilla/drinkmxr)
